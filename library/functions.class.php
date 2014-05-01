@@ -16,7 +16,7 @@
 
 		// private constructor function 
 		// to prevent external instantiation 
-		private function __construct( $config = array() ) {
+		public function __construct( $config = array() ) {
 
 		} 
 
