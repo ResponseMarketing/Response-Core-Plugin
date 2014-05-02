@@ -4,8 +4,7 @@
 | remove links from comments
 |--------------------------------------------------------------------------
 */
-
-remove_filter(‘comment_text’, ‘make_clickable’, 9);
+if (!is_admin() && function_exists('make_clickable')) remove_filter('comment_text', 'make_clickable', 9);
 
 function preprocess_comment_handler( $commentdata ) { 
 

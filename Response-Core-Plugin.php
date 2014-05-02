@@ -3,7 +3,7 @@
  * Plugin Name: Response Core Functionalities Plugin
  * Plugin URI: http://thepowertoprovoke.com
  * Description: This WordPress plugin is intended for use by Response Marketing. Support will not be granted to anyone other than Response Marketing Employees
- * Version: 0.2
+ * Version: 0.3
  * Author: Response Marketing
  * Author URI: http://thepowertoprovoke.com
  * License: GPL2
@@ -17,13 +17,14 @@
 	add_action( 'init', 'github_plugin_updater_test_init' );
 	function github_plugin_updater_test_init() {
 
-		include_once('updates/updater.class.php');
+		include_once( dirname(__FILE__).'/updates/updater.class.php');
 
 		define( 'WP_GITHUB_FORCE_UPDATE', true );
 		// set configuration
-		include( dirname(__FILE__).'updates/updater.config.php');
+		include( dirname(__FILE__).'/updates/updater.config.php');
 
 	}
+	include_once( dirname(__FILE__).'/updates/updater.admin.php');
 /*
 |--------------------------------------------------------------------------
 | Main functions class with configuration array
