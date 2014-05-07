@@ -3,7 +3,7 @@
  * Plugin Name: Response Core Functionalities Plugin
  * Plugin URI: http://thepowertoprovoke.com
  * Description: This WordPress plugin is intended for use by Response Marketing. Support will not be granted to anyone other than Response Marketing Employees
- * Version: 0.4
+ * Version: 0.5
  * Author: Response Marketing
  * Author URI: http://thepowertoprovoke.com
  * License: GPL2
@@ -82,7 +82,6 @@
 	);
 	require_once( dirname( __FILE__ ) . '/required-plugins/required.class.php' );
 	include( dirname( __FILE__ ) . '/required-plugins/required.plugins.php' );
-	
 
 /*
 |--------------------------------------------------------------------------
@@ -99,6 +98,7 @@
 | remove links from comments
 |--------------------------------------------------------------------------
 */
+	include('library/acf/cls-fieldgroups.php');
 	if ( !is_admin() && get_field('rcp_cls', 'options') ) {
 		global $rcp_author_cls;
 		global $rcp_html_cls;
@@ -133,9 +133,11 @@
 	if ( is_plugin_active( 'wp-document-revisions/wp-document-revisions.php' ) ) {
   		//plugin is activated
   		array_push($menu_pages, '*RCP WPDR EXT');
+  		include('library/acf/wpdr-fieldgroups.php');
   		$rcp_wpdr_filter = (get_field('rcp_wpdr_filter', 'options') ? true : false);
   		if ($rcp_wpdr_filter) {
   			include( RP_DIR . 'library/wp-document-revisions-extension/wp-document-revisions-extension.php' );
+
   		}
   	}
 	

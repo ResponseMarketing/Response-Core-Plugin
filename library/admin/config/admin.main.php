@@ -15,6 +15,11 @@
 				'url' => 'admin.php?page=acf-options-rcp-cls',
 				'name' => 'Comment Link Security'
 			),
+			'wpdre' => array(
+				'screenshot' => 'wpdr-ext.png',
+				'url' => 'admin.php?page=acf-options-rcp-wpdr-ext',
+				'name' => 'WP Document Revision Etension'
+			),
 		);
 
 	}

@@ -8,7 +8,7 @@ Requires at least: 3.9
 
 Tested up to: 3.9
 
-Stable tag: 0.4
+Stable tag: 0.5
 
 License: GPLv2 or later
 
@@ -30,6 +30,12 @@ Usage Instructions
 
 Changelog
 ===========
+
+### 0.5 Update main plugin options page to include WP Document Revisions Extension options
+
+### 0.4 Integration with WP Document Revisions and our extension
+
+### 0.3 Integration with Advanced Custom Fields for options pages
 
 ### 0.2 (test update)
 
