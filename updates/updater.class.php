@@ -68,8 +68,8 @@ class WP_GitHub_Updater {
 	public function __construct( $config = array() ) {
 
 		$defaults = array(
-			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => dirname( plugin_basename( __FILE__ ) ),
+			'slug' => RP_GITHUB_PLUGIN_NAME,
+			'proper_folder_name' => dirname( RP_GITHUB_PLUGIN_NAME ),
 			'sslverify' => true,
 			'access_token' => '',
 		);
@@ -128,7 +128,7 @@ class WP_GitHub_Updater {
 	 * @return bool overrule or not
 	 */
 	public function overrule_transients() {
-		return ( defined( 'WP_GITHUB_FORCE_UPDATE' ) && WP_GITHUB_FORCE_UPDATE );
+		return ( defined( 'RP_GITHUB_FORCE_UPDATE' ) && RP_GITHUB_FORCE_UPDATE );
 	}
 
 

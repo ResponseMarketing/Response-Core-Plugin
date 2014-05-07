@@ -4,8 +4,8 @@
  */
 
 	if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
-		$config = array(
-			'slug' => plugin_basename(__FILE__), // this is the slug of your plugin
+		$update_config = array(
+			'slug' => RP_GITHUB_PLUGIN_NAME, // this is the slug of your plugin
 			'proper_folder_name' => 'Response-Core-Plugin', // this is the name of the folder your plugin lives in
 			'api_url' => 'https://api.github.com/repos/ResponseMarketing/Response-Core-Plugin',
 			'raw_url' => 'https://raw.github.com/ResponseMarketing/Response-Core-Plugin/master',
@@ -17,7 +17,7 @@
 			'readme' => 'README.md', // which file to use as the readme for the version number
 			'access_token' => '', // Access private repositories by authorizing under Appearance > Github Updates when this example plugin is installed
 		);
-		new WP_GitHub_Updater($config);
+		new WP_GitHub_Updater($update_config);
 	}
 
 ?>
