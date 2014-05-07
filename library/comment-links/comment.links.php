@@ -4,7 +4,7 @@
 | remove links from comments
 |--------------------------------------------------------------------------
 */ 
-
+	
 	global $rcp_author_cls;
 	global $rcp_html_cls;
 	global $rcp_cls;
