@@ -3,7 +3,7 @@
  * Plugin Name: Response Core Functionalities Plugin
  * Plugin URI: http://thepowertoprovoke.com
  * Description: This WordPress plugin is intended for use by Response Marketing. Support will not be granted to anyone other than Response Marketing Employees
- * Version: 0.5
+ * Version: 0.6
  * Author: Response Marketing
  * Author URI: http://thepowertoprovoke.com
  * License: GPL2
@@ -23,13 +23,15 @@
 | Define CONSTANTS
 |--------------------------------------------------------------------------
 */
-	define( 'RP_PLUG_NAME', 'Response Core Plugin' );
+	define( 'RP_PLUG_FOLDER', basename(dirname(__FILE__)) );
+	// Response-Core-Plugin	
+	define( 'RP_PLUG_NAME', ucwords( str_replace( "-", " ", RP_PLUG_FOLDER ) ) );
+	// Response Core Plugin
 	define( 'RP_GITHUB_FORCE_UPDATE', true );
 	define( 'RP_GITHUB_PLUGIN_NAME', plugin_basename(__FILE__) );
 	define( 'RP_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'RP_SCREENSHOTS', plugins_url( 'library/screenshots/' , __FILE__ ) );
 	define( 'RP_PLUGINS', plugins_url( 'required-plugins/' , __FILE__ ) );
-
 /*
 |--------------------------------------------------------------------------
 | include updater
@@ -113,13 +115,10 @@
 
 /*
 |--------------------------------------------------------------------------
-| Detect Advanced custom fields
+| Response google retargeting
 |--------------------------------------------------------------------------
 */
-
-	// if ( !is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
-	//   //plugin is activated
-	// }
+	include( dirname(__FILE__).'/library/google-retargeting/retargeting.php');
 
 /*
 |--------------------------------------------------------------------------
@@ -130,6 +129,7 @@
 	include( dirname(__FILE__).'/library/admin/admin.main.php');
 	include( dirname(__FILE__).'/library/admin/menu.setup.php');
 	include( dirname(__FILE__).'/updates/updater.admin.php');
+	include( dirname(__FILE__).'/library/admin/admin.retargeting.php');
 	if ( is_plugin_active( 'wp-document-revisions/wp-document-revisions.php' ) ) {
   		//plugin is activated
   		array_push($menu_pages, '*RCP WPDR EXT');
