@@ -1,0 +1,27 @@
+#rcp_retargeting #major-publishing-actions {
+	width: 101.3%;
+	margin: 0 -4.6% -12px;
+}
+#rcp_retargeting label.rcp_retargeting_main {
+	width: 69%;
+	display: inline-block;
+	float: left;
+	line-height: 1.4;
+	text-align: left;
+}
+#rcp_retargeting #rcp_retargeting_chk {
+	visibility: hidden;
+	position: absolute;
+	left: -9999999999px;
+}
+#rcp_retargeting .rcp_retargeting_resp_meta_field {
+	margin: 5px 0;
+}
+#rcp_retargeting .rcp_retargeting_resp_meta_field input[type=text] {
+	width:99%;
+}
+#rcp_retargeting .rcp_retargeting_resp_meta_field .rcp_retargeting_radio {
+	display: inline-block;
+	text-align: center;
+	margin: 3px 10px 10px 0;
+}
