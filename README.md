@@ -8,7 +8,7 @@ Requires at least: 3.9
 
 Tested up to: 3.9
 
-Stable tag: 0.6
+Stable tag: 0.7
 
 License: GPLv2 or later
 
@@ -32,6 +32,8 @@ Usage Instructions
 
 Changelog
 ===========
+
+### 0.6 Remove submodule dependancy
 
 ### 0.5 Update main plugin options page to include WP Document Revisions Extension options
 

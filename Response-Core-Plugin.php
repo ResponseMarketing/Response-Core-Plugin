@@ -3,7 +3,7 @@
  * Plugin Name: Response Core Functionalities Plugin
  * Plugin URI: http://thepowertoprovoke.com
  * Description: This WordPress plugin is intended for use by Response Marketing. Support will not be granted to anyone other than Response Marketing Employees
- * Version: 0.6
+ * Version: 0.7
  * Author: Response Marketing
  * Author URI: http://thepowertoprovoke.com
  * License: GPL2
