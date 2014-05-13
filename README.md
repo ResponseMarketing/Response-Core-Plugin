@@ -17,6 +17,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Usage Instructions
 ===========
 
+
+
 * Update the $config array with your github information
 
 * In v1.6, the updater can pick up the version from the plugin header as well.
